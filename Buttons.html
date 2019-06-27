@@ -1,0 +1,141 @@
+<!docytpe html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--
+        Button tags
+        .btn classes are designed to be used with the <button> element. However, you can
+        also use these classes on <a> or <input> elements.
+        
+        When using button classes on <a> elements that used to trigger in-page functionality
+        (like collapsing content), rather than linking to new pages or sections within the
+        current page, these links should be given a role="button" to appropriately convey
+        their purpose to assistive technologies such as screen readers.
+        -->
+        <div>
+            <a class="btn btn-primary" href="#" role="button">Link</a>
+            <button class="btn btn-primary" type="submit">Button</button>
+            <input class="btn btn-primary" type="button" value="Input">
+            <input class="btn btn-primary" type="submit" value="Submit">
+            <input class="btn btn-primary" type="reset" value="Reset">
+        </div>
+
+        <div>
+            <!--
+            Outline buttons
+            ...
+            -->
+            <button type="button" class="btn btn-outline-primary">Primary</button>
+        </div>
+
+        <div>
+            <!--
+            Sizes
+            Large or small buttons...add .btn-lg or .btn-sm
+            -->
+            <button type="button" class="btn btn-primary btn-lg">Large button</button>
+            <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+            <button type="button" class="btn btn-primary btn-sm">Small button</button>
+            <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+            <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button>
+        </div>
+
+        <div>
+            <!--
+            Active state
+            Buttons will appear pressed (with a darker background, darker border, and inset shadow)
+            when active. You can force the same active appearance with .active (and include the
+            aria-pressed="true" attribute) should you need to replicate the state programmatically.
+            -->
+            <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Primary link</a>
+            <a href="#" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Link</a>
+
+            <!--
+            Disabled state
+            Make buttons look inactive by adding the disabled boolean attribute to any <button> element.
+            -->
+            <button type="button" class="btn btn-lg btn-primary" disabled>Primary button</button>
+            <button type="button" class="btn btn-secondary btn-lg" disabled>Button</button>
+
+            <!--
+            Disabled buttons using the <a> behave a bit different:
+                -<a>s don't support the disabled attribute, so you must add the .disabled class to make
+                it visually appear disabled.
+                -Some future-friendly sytles are included to disable all pointer-events on
+                anchor buttons. In browsers which support that property, you won't see the disabled cursor at all.
+                -Disabled buttons should include the aria-disabled="true" attribute to indicate the state
+                of the element...
+
+            Link functionality caveat
+            ...add tabindex="-1" attribute on these links (to prevent them from receiving keyboard focus)...
+            -->
+            <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+            <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+        </div>
+
+        <div>
+            <!--
+            Button plugin
+            
+            Toggle states
+            Add data-toggle="button" to toggle a button's active state
+            -->
+            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Single toggle
+            </button>
+        </div>
+
+        <!--
+        Checkbox and radio buttons
+        Bootstrap's .button styles can be applied to other elements, such as <label>s, to
+        provide checkbox or radio style button toggling. Add data-toggle="buttons" to a
+        .btn-group containing those modified buttons to enable their toggling behavior via
+        JavaScript and add .btn-group-toggle to style the <input>s within your buttons.
+        Note that you can create single input-powered buttons or groups of them.
+
+        The checked state for these buttons is only updated via click event on the button...
+
+        Note that pre-checked buttons require you to manually add the .active class to the input's <label>.
+        -->
+        <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="checkbox" checked autocomplete="off"> Checked
+            </label>
+        </div>
+
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+            </label>
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Radio
+            </label>
+        </div>
+
+        <!--
+        https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-buttons.php
+        -->
+        <div>
+            <button type="button" class="btn btn-primary" disabled>
+                <span class="spinner-border spinner-border-sm"></span>
+            </button>
+            <button type="button" class="btn btn-primary" disabled>
+                <span class="spinner-grow spinner-grow-sm"></span> Loading...
+            </button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
