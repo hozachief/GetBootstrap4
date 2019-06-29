@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <!--
+        Collapse
+        Toggle the visibility of content across your project with a few classes and our JavaScript plugins.
+
+        How it works
+        The collapse JavaScript plugin is used to show and hide content. Buttons or anchors
+        are used as triggers that are mapped to specific elements you toggle. Collapsing an
+        element will animate the height from its current value to 0. Given how CSS handles
+        animations, you cannot use padding on a .collapse element. Instead, use the class
+        as an independent wrapping element.
+
+        .collapse hides content
+        .collapsing is applied during transitions
+        .collapse.show shows content
+
+        You can use a link with the href attribute, or a button with the data-target attribute.
+        Both cases, the data-toggle="collapse" is required.
+        -->
+        <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Link with href
+            </a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Button with data-target
+            </button>
+        </p>
+        <div class="collapse" id="collapseExample">
+            <!--testing...-->
+            <img src="GetBootstrap_Images/image2.png" class="card-img-top" alt="Image">
+
+            <div class="card card-body">
+                Some random text here. Random random random random random random. Blah blah.
+            </div>
+        </div>
+
+        <!--
+        Multiple targets
+        A <button> or <a> can show and hide multiple elements by referencing them with a
+        JQuery selector in its href or data-target attribute. Multiple <button> or <a> can
+        show and hide an element if they each reference it with their href or data-target
+        attribute.
+        -->
+        <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Toggle first element</a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Toggle second element</button>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+        </p>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <!--testing...-->
+                    <img src="GetBootstrap_Images/image3.png" class="card-img-top" alt="Image">
+
+                    <div class="card card-body">
+                        Blah blah blah words words words
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <!--testing...-->
+                    <img src="GetBootstrap_Images/image.png" class="card-img-top" alt="Image">
+
+                    <div class="card card-body">
+                        Example 2 blah blah blah blah
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        Accordion example
+        Using the card component, you can extend the default collapse behavior to create
+        an accordion. To properly achieve the accordion style, be sure to use .accordion as a wrapper.
+
+        Accessibility
+        Be sure to add aria-expanded to the control element. This attribute explicitly conveys
+        the current state of the collapsible element tied to the control to screen readers and
+        similar assistive technologies. If the collapsible element is closed by default, the attribute
+        on the control element should have a value of aria-expanded="false". If you've set the collapsible
+        element to be open by default using the show class, set aria-expanded="true" on the control instead.
+        The plugin will automatically toggle this attribute on the control based on whether or not the
+        collapsible element has been opened or closed (via JavaScript, or because the user triggered
+        another control element also tied to the same collapsible element). If the control element's HTML
+        element is not a button (e.g., an <a> or <div>), the attribute role="button" should be added to the element.
+
+        If your element is targeting a single collapsible element - i.e. the data-target attribute is pointing
+        to an id selector - you should add the aria-controls attribute to the control element, containing
+        the id of the collapsible element. Modern screen readers and similar assistive technologies make use
+        of this attribute to provide users with additional shortcuts to navigate directly to the collapsible
+        element itself.
+        -->
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Collapsible Group Item #1
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Some random text. Why? Because GetBootstrap.com thinks latin is a good idea for text. OK.
+                        </div>
+                </div>                
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Collapsible Group Item #2
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        More random text. blah blah blah blah
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Collapsible Group Item #3
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        Random randomness because i can't think of anything else. blah blah
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
+        Usage
+        ...
+        -->
+
+        <!--jQuery, Popper.js, Bootstrap JS (plugins)-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>
